@@ -8,7 +8,19 @@ image:
   src:
     - 'assets::unknown-(1).png'
 updated_by: b5b6debc-3727-41dc-9387-bf66ddff0739
-updated_at: 1656752946
+updated_at: 1658759602
+published: true
+use_meta_keywords: true
+meta_keywords:
+  - test
+  - test2
+  - test3
+  - test4
+no_index_page: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+override_twitter_settings: false
 ---
 ## Welcome to your new brand Statamic site!
 
