@@ -4,11 +4,10 @@ blueprint: pages
 title: Home
 template: home
 author: b5b6debc-3727-41dc-9387-bf66ddff0739
-image:
-  src:
-    - 'assets::unknown-(1).png'
 updated_by: b5b6debc-3727-41dc-9387-bf66ddff0739
-updated_at: 1656752946
+updated_at: 1660325126
+assets_field: uuu.png
+published: true
 ---
 ## Welcome to your new brand Statamic site!
 

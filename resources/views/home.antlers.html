@@ -13,5 +13,8 @@
     </svg>
 </a>
 <article class="mt-4 bg-white p-8 shadow-xl rounded-xl max-w-xl prose">
-    {{ responsive:image }}
+    {{ glide:assets_field }}
+        {{ assets_field:height divide="width" multiply="100" }}vw
+        {{ assets_field:width divide="height" multiply="100" }}vh
+    {{ /glide:assets_field }}
 </article>
