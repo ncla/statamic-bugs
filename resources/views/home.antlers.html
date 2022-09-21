@@ -31,9 +31,15 @@
     <div>button test</div>
     {{ scope handle_prefix="mega_" }}
         {{# Works #}}
-        {{ mega_label}}
+        {{ mega_label }}
         {{ label }}
-        {{# uh oh #}}
+
+        {{# does not work #}}
         {{ partial:button }}
+
+        {{# does not work #}}
+        {{ if label }}
+            testing if label
+        {{ /if }}
     {{ /scope }}
 </article>
