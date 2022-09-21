@@ -49,7 +49,12 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
-          read_only: false
+      -
+        import: fieldset_test
+        prefix: epic_
+      -
+        import: button
+        prefix: mega_
   sidebar:
     display: Sidebar
     fields:

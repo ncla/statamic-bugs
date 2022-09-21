@@ -1,0 +1,36 @@
+{{#
+	@name Button attributes
+	@desc A single button component. Faux is used when a button is displayed inside a link (for example in link blocks).
+    @param* label The caption label.
+    @param as The wrapping element. Defaults to `a`.
+    @param button_type `Inline` if the button needs to be rendered as an inline button.
+    @param faux Boolean. For faux button wrapped in an actual button/anchor.
+    @param inverted Boolean. When the button needs inverted styles.
+#}}
+
+{{# Works #}}
+{{ label }}
+
+{{# Condition fails #}}
+{{ if label }}
+    test string
+    <{{ as or 'a' }}
+        {{ slot:attributes }}
+        class="
+            relative font-bold text-white box-content motion-safe:transition
+            focus-visible:ring-primary focus:outline-none focus-visible:ring focus-visible:ring-offset-2
+            {{ if button_type === 'inline' }}
+                underline
+            {{ else }}
+                inline-flex items-center py-5 px-[42px] leading-none uppercase bg-black no-underline select-none
+                whitespace-nowrap border-primary transition-colors
+                before:block before:z-10 before:bg-lime-green before:absolute before:pointer-events-none before:opacity-0 before:transition-opacity
+                hover:before:opacity-100 hover:text-black
+            {{ /if }}
+            {{ class }}
+        "
+        {{ !faux ?= { partial:button_attributes } }}
+    >
+        <span class="z-20">{{ link_type == 'email' ? { label | obfuscate_email } : label }}</span>
+    </{{ as or 'a' }}>
+{{ /if }}

@@ -13,5 +13,27 @@
     </svg>
 </a>
 <article class="mt-4 bg-white p-8 shadow-xl rounded-xl max-w-xl prose">
-    {{ responsive:image }}
+    {{# Works fine #}}
+    {{ epic_text_field }}
+    {{ epic_markdown_field }}
+
+    {{# Works fine; scoped #}}
+    {{ scope handle_prefix="epic_" }}
+        {{ text_field }}
+        {{ markdown_field }}
+    {{ /scope }}
+
+    {{# Works fine; scoped #}}
+    {{ scope handle_prefix="epic_" }}
+        {{ partial:test_partial }}
+    {{ /scope }}
+
+    <div>button test</div>
+    {{ scope handle_prefix="mega_" }}
+        {{# Works #}}
+        {{ mega_label}}
+        {{ label }}
+        {{# uh oh #}}
+        {{ partial:button }}
+    {{ /scope }}
 </article>

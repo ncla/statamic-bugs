@@ -1,0 +1,30 @@
+title: fieldset_test
+fields:
+  -
+    handle: text_field
+    field:
+      input_type: text
+      antlers: false
+      display: 'Text Field'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: markdown_field
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: 'Markdown Field'
+      type: markdown
+      icon: markdown
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
